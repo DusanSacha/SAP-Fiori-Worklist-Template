@@ -1,0 +1,16 @@
+{
+  "name": "sap-fiori-worklist-template",
+  "version": "0.1.0",
+  "description": "Simple SAP Fiori Worklist Template example app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "~4.13.3"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "author": "Dusan Sacha, dusan.sacha@cadaxo.com"
+}
