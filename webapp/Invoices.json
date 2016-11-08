@@ -1,0 +1,56 @@
+{
+  "Invoices": [
+	{
+	  "ProductName": "The Terminator",
+	  "Quantity": 2,
+	  "ExtendedPrice": 7.2000,
+	  "ShipperName": "Fun Inc.",
+	  "ShippedDate": "2015-04-01T00:00:00",
+	  "Status": "A",
+	  "Intro" : "I'll be back!",
+	  "Icon" : "sap-icon://wrench",
+	  "Fav" : "true",
+	  "Flag" : "true",
+	  "Locked" : "true"
+	},
+	{
+	  "ProductName": "Star Wars",
+	  "Quantity": 21,
+	  "ExtendedPrice": 53.2100,
+	  "ShipperName": "Fun Inc.",
+	  "ShippedDate": "2015-04-01T00:00:00",
+	  "Status": "A",
+	  "Intro" : "May the Force be with you.",
+	  "Icon" : "sap-icon://unfavorite",
+	  "Fav" : "true",
+	  "Flag" : "true",
+	  "Locked" : "true"
+	},
+	{
+	  "ProductName": "The Godfather",
+	  "Quantity": 21,
+	  "ExtendedPrice": 66.2000,
+	  "ShipperName": "Fun Inc.",
+	  "ShippedDate": "2015-04-01T00:00:00",
+	  "Status": "B",
+	  "Intro" : "I'm going to make him an offer he can't refuse.",
+	  "Icon" : "sap-icon://flight",
+	  "Fav" : "true",
+	  "Flag" : "true",
+	  "Locked" : "true"
+	},
+	{
+	  "ProductName": "Back to the future",
+	  "Quantity": 21,
+	  "ExtendedPrice": 3.300,
+	  "ShipperName": "Fun Inc.",
+	  "ShippedDate": "2015-04-01T00:00:00",
+	  "Status": "C",
+	  "Intro" : "Marty! We have to go back!",
+	  "Icon" : "sap-icon://performance",
+	  "Fav" : "true",
+	  "Flag" : "true",
+	  "Locked" : "true"
+	}
+  ]
+}
