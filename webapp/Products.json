@@ -1,0 +1,52 @@
+{
+  "Products": [
+	{
+	  "ProductName": "The Terminator",
+	  "ExtendedPrice" : 12.2131,
+	  "YearOfOrigin": 1984,
+	  "Director": "James Cameron",
+	  "Status": "A",
+	  "Intro" : "I'll be back!",
+	  "Icon" : "sap-icon://wrench",
+	  "Fav" : true,
+	  "Flag" : false,
+	  "Locked" : true
+	},
+	{
+	  "ProductName": "Star Wars IV",
+	  "ExtendedPrice" : 43.89,
+	  "YearOfOrigin": 1977,
+	  "Director": "George Lucas",
+	  "Status": "A",
+	  "Intro" : "May the Force be with you.",
+	  "Icon" : "sap-icon://unfavorite",
+	  "Fav" : false,
+	  "Flag" : true,
+	  "Locked" : true
+	},
+	{
+	  "ProductName": "The Godfather",
+	  "ExtendedPrice" : 17.555,
+	  "YearOfOrigin": 1972,
+	  "Director": "Francis Ford Coppola",
+	  "Status": "B",
+	  "Intro" : "I'm going to make him an offer he can't refuse.",
+	  "Icon" : "sap-icon://flight",
+	  "Fav" : true,
+	  "Flag" : false,
+	  "Locked" : false
+	},
+	{
+	  "ProductName": "Back to the future",
+	  "ExtendedPrice" : 80.000,
+	  "YearOfOrigin": 1985,
+	  "Director": "Robert Zemeckis",
+	  "Status": "C",
+	  "Intro" : "Marty! We have to go back!",
+	  "Icon" : "sap-icon://performance",
+	  "Fav" : true,
+	  "Flag" : true,
+	  "Locked" : true
+	}
+  ]
+}

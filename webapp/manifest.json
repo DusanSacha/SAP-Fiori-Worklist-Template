@@ -39,9 +39,9 @@
 		  "bundleName": "cadaxo.app.i18n.i18n"
 		}
 	  },
-	  "invoice": {
+	  "product": {
 		"type": "sap.ui.model.json.JSONModel",
-		"uri": "Invoices.json"
+		"uri": "Products.json"
 	  },
 	  "currency": {
 	  	"type": "sap.ui.model.json.JSONModel",

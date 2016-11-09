@@ -7,7 +7,7 @@
       <pages>
          <Page title="{i18n>homePageTitle}">
             <content>
-            	<mvc:XMLView viewName="cadaxo.app.view.InvoiceList"/>
+            	<mvc:XMLView viewName="cadaxo.app.view.ProductList"/>
             </content>
          </Page>
       </pages>

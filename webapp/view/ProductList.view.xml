@@ -1,0 +1,59 @@
+<mvc:View
+   controllerName="cadaxo.app.controller.ProductList"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <List
+      headerText="{i18n>productListTitle}"
+      class="sapUiResponsiveMargin"
+      width="auto"
+      items="{product>/Products}" >
+      <items>
+         <ObjectListItem
+            title="{product>ProductName}"
+            number="{
+			   parts: [{path: 'product>ExtendedPrice'}, {path: 'currency>/currency'}],
+			   type: 'sap.ui.model.type.Currency',
+			   formatOptions: {
+				   showMeasure: false
+			   }
+		    }"
+		    numberUnit="{currency>/currency}"
+		    markFavorite="{product>Fav}"
+			markFlagged="{product>Flag}"
+			markLocked="{product>Locked}"
+			showMarkers="true"
+			intro="{product>Intro}"
+			icon="{product>Icon}">
+		    <firstStatus>
+					<ObjectStatus text="{
+						path: 'product>Status',
+						formatter: '.formatter.statusText'
+					}"
+					state="{
+						path: 'product>Status',
+						formatter: '.formatter.statusState'
+					}"/>
+				</firstStatus>
+				<secondStatus>
+					<ObjectStatus text="{
+						path: 'product>Status',
+						formatter: '.formatter.statusSecondState'
+					}"
+					/>
+				</secondStatus>
+				<attributes>
+					<ObjectAttribute title="{i18n>director}"
+					text = "{product>Director}"
+					active = "true"
+					press= "directorPressed"
+					/>
+					<ObjectAttribute title= "{i18n>yearOfOrigin}"
+					text = "{product>YearOfOrigin}"
+					active = "true"
+					press= "yearOfOriginPressed"
+					/>
+				</attributes>
+			</ObjectListItem>
+      </items>
+   </List>
+</mvc:View>
