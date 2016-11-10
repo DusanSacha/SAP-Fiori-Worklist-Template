@@ -2,7 +2,7 @@
 
 This is an SAP Fiori Example app which follows [SAPUI5 Developer Guidlines Worklist Template standarts (https://sapui5.netweaver.ondemand.com/#docs/guide/a77f2d29299247f8a3e30226507b1765.html)
 
-(Today - 10.Nov 2016 - still some parts are missing to meet the Worklist Template standarts - I am still working on it :)
+(Today - 10th of Nov 2016 - still some parts are missing to meet the Worklist Template standarts - I am still working on it :)
 
 # Run localy
 
