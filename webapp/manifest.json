@@ -1,56 +1,99 @@
 {
-  "_version": "1.1.0",
-  "sap.app": {
 	"_version": "1.1.0",
-	"id": "cadaxo.app",
-	"type": "application",
-	"i18n": "i18n/i18n.properties",
-	"title": "{{appTitle}}",
-	"description": "{{appDescription}}",
-	"applicationVersion": {
-	  "version": "1.0.0"
-	}
-  },
-  "sap.ui": {
-	"_version": "1.1.0",
-	"technology": "UI5",
-	"deviceTypes": {
-	  "desktop": true,
-	  "tablet": true,
-	  "phone": true
-	},
-	"supportedThemes": [
-	  "sap_bluecrystal"
-	]
-  },
-  "sap.ui5": {
-	"_version": "1.1.0",
-	"rootView": "cadaxo.app.view.App",
-	"dependencies": {
-	  "minUI5Version": "1.30",
-	  "libs": {
-		"sap.m": {}
-	  }
-	},
-	"models": {
-	  "i18n": {
-		"type": "sap.ui.model.resource.ResourceModel",
-		"settings": {
-		  "bundleName": "cadaxo.app.i18n.i18n"
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "cadaxo.app",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.0.0"
 		}
-	  },
-	  "product": {
-		"type": "sap.ui.model.json.JSONModel",
-		"uri": "Products.json"
-	  },
-	  "currency": {
-	  	"type": "sap.ui.model.json.JSONModel",
-	  	"uri": "Currency.json"
-	  }
 	},
-	"contentDensities": {
-		"compact": true,
-		"cozy": true
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"rootView": "cadaxo.app.view.App",
+		"dependencies": {
+			"minUI5Version": "1.30",
+			"libs": {
+				"sap.m": {}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "cadaxo.app.i18n.i18n"
+				}
+			},
+			"product": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "Products.json"
+			},
+			"currency": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "Currency.json"
+			}
+		},
+		"routing" : {
+			"config" : {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "cadaxo.app.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"bypassed": {
+					"target": "notFound"
+				}
+			},
+			"routes": [
+				{
+				  "pattern": "",
+				  "name": "overview",
+				  "target": "overview"
+				},
+				{
+				  "pattern": "detail/{productPath}",
+				  "name": "detail",
+				  "target": "detail"
+				}
+			],
+			"targets" : {
+				"overview": {
+				  "viewName": "ProductList"
+				},
+				"detail": {
+				  "viewName": "Detail"
+				},
+			    "objectNotFound": {
+				  "viewName": "ObjectNotFound",
+				  "viewId": "objectNotFound"
+			    },
+			    "notFound": {
+				  "viewName": "NotFound"
+		 	    }
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/zui5_cdx_wlist/webapp",
+		"_version": "1.1.0"
 	}
-  }
 }

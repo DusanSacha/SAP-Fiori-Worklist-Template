@@ -1,0 +1,6 @@
+{
+  "deploy": {
+    "destination": "A4H",
+    "name": "zui5_cdx_wlist"
+  }
+}

@@ -1,15 +1,8 @@
 <mvc:View
    controllerName="cadaxo.app.controller.App" 
    xmlns="sap.m"
+   xmlns:s="sap.m.semantic"
    xmlns:mvc="sap.ui.core.mvc"
    displayBlock="true">
-   <App>
-      <pages>
-         <Page title="{i18n>homePageTitle}">
-            <content>
-            	<mvc:XMLView viewName="cadaxo.app.view.ProductList"/>
-            </content>
-         </Page>
-      </pages>
-   </App>
+   <App id="app" />
 </mvc:View>

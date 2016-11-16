@@ -2,30 +2,57 @@
    controllerName="cadaxo.app.controller.ProductList"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
-   <List
-      headerText="{i18n>productListTitle}"
-      class="sapUiResponsiveMargin"
-      width="auto"
-      items="{product>/Products}" >
-      <items>
-         <ObjectListItem
-            title="{product>ProductName}"
-            number="{
-			   parts: [{path: 'product>ExtendedPrice'}, {path: 'currency>/currency'}],
-			   type: 'sap.ui.model.type.Currency',
-			   formatOptions: {
-				   showMeasure: false
-			   }
-		    }"
-		    numberUnit="{currency>/currency}"
-		    markFavorite="{product>Fav}"
-			markFlagged="{product>Flag}"
-			markLocked="{product>Locked}"
-			showMarkers="true"
-			intro="{product>Intro}"
-			icon="{product>Icon}">
-		    <firstStatus>
-					<ObjectStatus text="{
+	<Page>
+	    <Table
+		  id="cdx-productList"
+	      headerText="{i18n>productListTitle}"
+	      class="sapUiResponsiveMargin"
+	      width="auto"
+	      items="{
+	    	path: 'product>/Products',
+	    	sorter: {path:'ProductName',
+	    			group: '.getGroupForList'
+	    			}
+	      }"
+	      updateFinished="onUpdateFinished">
+	   	  <headerToolbar>
+	   	  	<Toolbar>
+	   	  		<Title text="{productListView>/productListTitle}"/>
+	   	  		<ToolbarSpacer/>
+	   	  		<SearchField width="25%" search="onFilterProducts" selectOnFocus="false"/>
+	   	  	</Toolbar>
+	   	  </headerToolbar>
+	   	  <columns>
+			<Column>
+				<Text text="{i18n>columnName}"/>
+			</Column>
+			<Column
+				minScreenWidth="Small"
+				demandPopin="true">
+				<Text text="{i18n>columnStatus}"/>
+			</Column>
+			<Column
+				minScreenWidth="Small"
+				demandPopin="true">
+				<Text text="{i18n>columnDirector}"/>
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="false">
+				<Text text="{i18n>columnYear}"/>
+			</Column>
+			<Column
+				hAlign="End">
+				<Text text="{i18n>columnPrice}"/>
+			</Column>
+		  </columns>
+	      <items>
+	      	 <ColumnListItem
+	      		type="Navigation"
+				press="onPress">
+	      	 	<cells>
+	      	 		<ObjectIdentifier title="{product>ProductName}" />
+	      	 		<ObjectStatus text="{
 						path: 'product>Status',
 						formatter: '.formatter.statusText'
 					}"
@@ -33,27 +60,19 @@
 						path: 'product>Status',
 						formatter: '.formatter.statusState'
 					}"/>
-				</firstStatus>
-				<secondStatus>
-					<ObjectStatus text="{
-						path: 'product>Status',
-						formatter: '.formatter.statusSecondState'
+					<Text text="{product>Director}"/>
+					<Text text="{product>YearOfOrigin}"/>
+					<ObjectNumber number="{
+					   parts: [{path: 'product>ExtendedPrice'}, {path: 'currency>/currency'}],
+					   type: 'sap.ui.model.type.Currency',
+					   formatOptions: {
+						   showMeasure: false
+					   }
 					}"
-					/>
-				</secondStatus>
-				<attributes>
-					<ObjectAttribute title="{i18n>director}"
-					text = "{product>Director}"
-					active = "true"
-					press= "directorPressed"
-					/>
-					<ObjectAttribute title= "{i18n>yearOfOrigin}"
-					text = "{product>YearOfOrigin}"
-					active = "true"
-					press= "yearOfOriginPressed"
-					/>
-				</attributes>
-			</ObjectListItem>
-      </items>
-   </List>
+					unit="{currency>/currency}"/>
+	      	 	</cells>
+	      	 </ColumnListItem>
+	      </items>
+	   </Table>
+   </Page>
 </mvc:View>

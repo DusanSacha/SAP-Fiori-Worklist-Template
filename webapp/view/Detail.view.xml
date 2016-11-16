@@ -1,0 +1,54 @@
+<mvc:View
+	controllerName="cadaxo.app.controller.Detail"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page
+		showNavButton="true"
+		navButtonPress="onNavBack"
+		title="{i18n>detailPageTitle}">
+		<ObjectHeader
+			responsive="true"
+			fullScreenOptimized="true"
+			intro="{product>Intro}"
+			title="{product>ProductName}"
+			number="{
+				   parts: [{path: 'product>ExtendedPrice'}, {path: 'currency>/currency'}],
+				   type: 'sap.ui.model.type.Currency',
+				   formatOptions: {
+					   showMeasure: false
+				   }
+			    }"
+			numberUnit="{currency>/currency}"
+			markFavorite="{product>Fav}"
+			markFlagged="{product>Flag}"
+			markLocked="{product>Locked}"
+			showMarkers="true"
+			icon="{product>Icon}">
+				<firstStatus>
+					<ObjectStatus text="{
+						path: 'product>Status',
+						formatter: '.formatter.statusText'
+					}"
+					state="{
+						path: 'product>Status',
+						formatter: '.formatter.statusState'
+					}"/>
+				</firstStatus>
+				<secondStatus>
+					<ObjectStatus text="{
+						path: 'product>Status',
+						formatter: '.formatter.statusSecondState'
+					}"
+					/>
+				</secondStatus>
+				<attributes>
+					<ObjectAttribute title="{i18n>director}"
+					text = "{product>Director}"
+					/>
+					<ObjectAttribute title= "{i18n>yearOfOrigin}"
+					text = "{product>YearOfOrigin}"
+					/>
+				</attributes>
+			</ObjectHeader>
+	</Page>
+</mvc:View>

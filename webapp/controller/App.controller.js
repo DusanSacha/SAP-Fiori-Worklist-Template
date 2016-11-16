@@ -1,9 +1,9 @@
 sap.ui.define([
-   "sap/ui/core/mvc/Controller",
+   "cadaxo/app/controller/BaseController",
    "sap/ui/model/json/JSONModel",
    "sap/ui/model/resource/ResourceModel"
-], function (Controller, JsonModel,ResourceModel) {
+], function (BaseController, JsonModel,ResourceModel) {
    "use strict";
-   return Controller.extend("cadaxo.app.controller.App", {
+   return BaseController.extend("cadaxo.app.controller.App", {
    });
 });
