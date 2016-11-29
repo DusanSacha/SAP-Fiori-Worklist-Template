@@ -18,7 +18,7 @@ To run this yourself, do the following steps:
 
 # Live
 
-https://murmuring-sea-93277.herokuapp.com/webapp/
+https://openui5-worklist-template.herokuapp.com/webapp/
 
 # Autor
 Dusan Sacha, dusan.sacha@cadaxo.com
